@@ -3,6 +3,8 @@ Abstract: Autonomous robots are intended to help humans performing a lot of diff
 
 ## Experiments on real maps
 
+![alt text](https://github.com/AngelJSD/LocalCoordinationDiagrams/blob/master/mapaBerlin.png)
+
 Berlin Scenario with 100 paths to be coordinated. Black cells represent obstacles. Paths to be coordinated are represented in gray cells. Additionally, the start cell is marked with a random coloured square and the last cell is marked with a triangle colored with the same color of the path where it belongs.
 
 
