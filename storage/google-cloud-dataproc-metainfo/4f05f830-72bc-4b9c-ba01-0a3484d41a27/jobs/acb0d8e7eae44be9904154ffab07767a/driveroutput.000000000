@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/tmp/acb0d8e7eae44be9904154ffab07767a/dijkstra.py", line 7, in <module>
-    from grid import Grid
-ImportError: No module named grid

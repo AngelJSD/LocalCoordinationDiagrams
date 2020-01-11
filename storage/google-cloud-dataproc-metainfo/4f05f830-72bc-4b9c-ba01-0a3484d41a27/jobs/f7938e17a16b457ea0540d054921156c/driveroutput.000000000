@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/tmp/f7938e17a16b457ea0540d054921156c/dijkstra.py", line 8, in <module>
-    from .grid import Grid
-ValueError: Attempted relative import in non-package
