@@ -1,0 +1,19 @@
+19/10/27 17:37:44 INFO org.spark_project.jetty.util.log: Logging initialized @3778ms
+19/10/27 17:37:44 INFO org.spark_project.jetty.server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+19/10/27 17:37:44 INFO org.spark_project.jetty.server.Server: Started @3990ms
+19/10/27 17:37:44 INFO org.spark_project.jetty.server.AbstractConnector: Started ServerConnector@191f6a9{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+19/10/27 17:37:45 WARN org.apache.spark.scheduler.FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
+19/10/27 17:37:47 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-1dec-m/10.128.0.23:8032
+19/10/27 17:37:47 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-1dec-m/10.128.0.23:10200
+19/10/27 17:37:51 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1572195603603_0006
+19/10/27 17:38:00 INFO org.apache.hadoop.mapred.FileInputFormat: Total input files to process : 1
+Traceback (most recent call last):
+  File "/tmp/5a92b52a16bf4a6a98ff19ab430762ce/dijkstra.py", line 196, in <module>
+    main()
+  File "/tmp/5a92b52a16bf4a6a98ff19ab430762ce/dijkstra.py", line 177, in main
+    sharedGrid = sc.broadcast(grid)
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/context.py", line 846, in broadcast
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/broadcast.py", line 91, in __init__
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/broadcast.py", line 113, in dump
+cPickle.PicklingError: Can't pickle __main__.cGrid: attribute lookup __main__.cGrid failed
+19/10/27 17:38:07 INFO org.spark_project.jetty.server.AbstractConnector: Stopped Spark@191f6a9{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}

@@ -1,0 +1,13 @@
+19/10/28 02:34:04 INFO org.spark_project.jetty.util.log: Logging initialized @3318ms
+19/10/28 02:34:04 INFO org.spark_project.jetty.server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+19/10/28 02:34:04 INFO org.spark_project.jetty.server.Server: Started @3437ms
+19/10/28 02:34:04 INFO org.spark_project.jetty.server.AbstractConnector: Started ServerConnector@225bb478{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+19/10/28 02:34:04 WARN org.apache.spark.scheduler.FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
+19/10/28 02:34:05 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-89fa-m/10.128.0.32:8032
+19/10/28 02:34:06 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-89fa-m/10.128.0.32:10200
+19/10/28 02:34:09 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1572229097244_0004
+19/10/28 02:34:15 INFO org.apache.hadoop.mapred.FileInputFormat: Total input files to process : 1
+19/10/28 02:34:22 WARN org.apache.spark.scheduler.TaskSetManager: Stage 1 contains a task of very large size (118 KB). The maximum recommended task size is 100 KB.
+19/10/28 02:52:03 WARN org.apache.spark.scheduler.cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: Requesting driver to remove executor 2 for reason Container killed by YARN for exceeding memory limits. 3.0 GB of 3 GB physical memory used. Consider boosting spark.yarn.executor.memoryOverhead.
+19/10/28 02:52:03 ERROR org.apache.spark.scheduler.cluster.YarnScheduler: Lost executor 2 on cluster-89fa-w-1.us-central1-c.c.lustrous-drake-255300.internal: Container killed by YARN for exceeding memory limits. 3.0 GB of 3 GB physical memory used. Consider boosting spark.yarn.executor.memoryOverhead.
+19/10/28 02:52:03 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 1.0 (TID 7, cluster-89fa-w-1.us-central1-c.c.lustrous-drake-255300.internal, executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Container killed by YARN for exceeding memory limits. 3.0 GB of 3 GB physical memory used. Consider boosting spark.yarn.executor.memoryOverhead.

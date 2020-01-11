@@ -1,0 +1,16 @@
+19/10/27 18:32:57 INFO org.spark_project.jetty.util.log: Logging initialized @4144ms
+19/10/27 18:32:57 INFO org.spark_project.jetty.server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+19/10/27 18:32:58 INFO org.spark_project.jetty.server.Server: Started @4363ms
+19/10/27 18:32:58 INFO org.spark_project.jetty.server.AbstractConnector: Started ServerConnector@11104cea{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+19/10/27 18:32:58 WARN org.apache.spark.scheduler.FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
+19/10/27 18:33:00 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-1dec-m/10.128.0.23:8032
+19/10/27 18:33:00 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-1dec-m/10.128.0.23:10200
+19/10/27 18:33:05 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1572195603603_0007
+19/10/27 18:33:15 INFO org.apache.hadoop.mapred.FileInputFormat: Total input files to process : 1
+Traceback (most recent call last):
+  File "/tmp/145c990263cc426ca61757093c19d830/dijkstra.py", line 197, in <module>
+    main()
+  File "/tmp/145c990263cc426ca61757093c19d830/dijkstra.py", line 170, in main
+    grid = Grid([len(wordsMap), len(wordsMap[0])].mGrid)
+AttributeError: 'list' object has no attribute 'mGrid'
+19/10/27 18:33:21 INFO org.spark_project.jetty.server.AbstractConnector: Stopped Spark@11104cea{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}

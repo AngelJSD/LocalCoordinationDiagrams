@@ -1,0 +1,616 @@
+19/10/28 01:26:57 INFO org.spark_project.jetty.util.log: Logging initialized @5019ms
+19/10/28 01:26:57 INFO org.spark_project.jetty.server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+19/10/28 01:26:57 INFO org.spark_project.jetty.server.Server: Started @5215ms
+19/10/28 01:26:57 INFO org.spark_project.jetty.server.AbstractConnector: Started ServerConnector@15ad412f{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+19/10/28 01:26:58 WARN org.apache.spark.scheduler.FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
+19/10/28 01:26:59 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-1dec-m/10.128.0.23:8032
+19/10/28 01:27:00 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-1dec-m/10.128.0.23:10200
+19/10/28 01:27:03 WARN org.apache.hadoop.hdfs.DataStreamer: Caught exception
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1252)
+	at java.lang.Thread.join(Thread.java:1326)
+	at org.apache.hadoop.hdfs.DataStreamer.closeResponder(DataStreamer.java:980)
+	at org.apache.hadoop.hdfs.DataStreamer.endBlock(DataStreamer.java:630)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:807)
+19/10/28 01:27:03 WARN org.apache.hadoop.hdfs.DataStreamer: Caught exception
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1252)
+	at java.lang.Thread.join(Thread.java:1326)
+	at org.apache.hadoop.hdfs.DataStreamer.closeResponder(DataStreamer.java:980)
+	at org.apache.hadoop.hdfs.DataStreamer.endBlock(DataStreamer.java:630)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:807)
+19/10/28 01:27:04 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1572195603603_0016
+19/10/28 01:27:13 INFO org.apache.hadoop.mapred.FileInputFormat: Total input files to process : 1
+19/10/28 01:27:26 WARN org.apache.spark.scheduler.TaskSetManager: Stage 1 contains a task of very large size (173 KB). The maximum recommended task size is 100 KB.
+19/10/28 01:41:57 WARN org.apache.spark.HeartbeatReceiver: Removing executor 6 with no recent heartbeats: 132823 ms exceeds timeout 120000 ms
+19/10/28 01:41:57 ERROR org.apache.spark.scheduler.cluster.YarnScheduler: Lost executor 6 on cluster-1dec-w-3.us-central1-b.c.lustrous-drake-255300.internal: Executor heartbeat timed out after 132823 ms
+19/10/28 01:41:57 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 0.0 in stage 1.0 (TID 18, cluster-1dec-w-3.us-central1-b.c.lustrous-drake-255300.internal, executor 6): ExecutorLostFailure (executor 6 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 132823 ms
+19/10/28 01:43:09 WARN org.apache.hadoop.hdfs.DataStreamer: Exception for BP-244296265-10.128.0.23-1572195600125:blk_1073741895_1071
+java.net.SocketTimeoutException: 70000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/10.128.0.23:55714 remote=/10.128.0.27:9866]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:161)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:131)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:118)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:451)
+	at org.apache.hadoop.hdfs.protocol.datatransfer.PipelineAck.readFields(PipelineAck.java:213)
+	at org.apache.hadoop.hdfs.DataStreamer$ResponseProcessor.run(DataStreamer.java:1080)
+19/10/28 01:43:09 WARN org.apache.hadoop.hdfs.DataStreamer: Error Recovery for BP-244296265-10.128.0.23-1572195600125:blk_1073741895_1071 in pipeline [DatanodeInfoWithStorage[10.128.0.27:9866,DS-6b9b44ed-09ca-4b57-a485-ea767eb33560,DISK], DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]]: datanode 0(DatanodeInfoWithStorage[10.128.0.27:9866,DS-6b9b44ed-09ca-4b57-a485-ea767eb33560,DISK]) is bad.
+19/10/28 01:43:57 WARN org.apache.spark.HeartbeatReceiver: Removing executor 5 with no recent heartbeats: 126910 ms exceeds timeout 120000 ms
+19/10/28 01:43:57 ERROR org.apache.spark.scheduler.cluster.YarnScheduler: Lost executor 5 on cluster-1dec-w-4.us-central1-b.c.lustrous-drake-255300.internal: Executor heartbeat timed out after 126910 ms
+19/10/28 01:43:57 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 2.0 in stage 1.0 (TID 20, cluster-1dec-w-4.us-central1-b.c.lustrous-drake-255300.internal, executor 5): ExecutorLostFailure (executor 5 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 126910 ms
+19/10/28 01:43:57 WARN org.apache.spark.HeartbeatReceiver: Removing executor 1 with no recent heartbeats: 176985 ms exceeds timeout 120000 ms
+19/10/28 01:43:57 ERROR org.apache.spark.scheduler.cluster.YarnScheduler: Lost executor 1 on cluster-1dec-w-5.us-central1-b.c.lustrous-drake-255300.internal: Executor heartbeat timed out after 176985 ms
+19/10/28 01:43:57 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 1.0 in stage 1.0 (TID 19, cluster-1dec-w-5.us-central1-b.c.lustrous-drake-255300.internal, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 176985 ms
+19/10/28 01:44:14 INFO org.apache.hadoop.hdfs.DataStreamer: Exception in createBlockOutputStream
+java.net.SocketTimeoutException: 65000 millis timeout while waiting for channel to be ready for read. ch : java.nio.channels.SocketChannel[connected local=/10.128.0.23:44366 remote=/10.128.0.28:9866]
+	at org.apache.hadoop.net.SocketIOWithTimeout.doIO(SocketIOWithTimeout.java:164)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:161)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:131)
+	at org.apache.hadoop.net.SocketInputStream.read(SocketInputStream.java:118)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at java.io.FilterInputStream.read(FilterInputStream.java:83)
+	at org.apache.hadoop.hdfs.protocolPB.PBHelperClient.vintPrefixed(PBHelperClient.java:451)
+	at org.apache.hadoop.hdfs.DataStreamer.createBlockOutputStream(DataStreamer.java:1735)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1484)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:14 WARN org.apache.hadoop.hdfs.DFSClient: Error while syncing
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:57 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:57 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:44:58 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:45:00 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:45:57 WARN org.apache.spark.HeartbeatReceiver: Removing executor 4 with no recent heartbeats: 126150 ms exceeds timeout 120000 ms
+19/10/28 01:45:57 ERROR org.apache.spark.scheduler.cluster.YarnScheduler: Lost executor 4 on cluster-1dec-w-2.us-central1-b.c.lustrous-drake-255300.internal: Executor heartbeat timed out after 126150 ms
+19/10/28 01:45:57 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 4.0 in stage 1.0 (TID 22, cluster-1dec-w-2.us-central1-b.c.lustrous-drake-255300.internal, executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 126150 ms
+19/10/28 01:45:57 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:46:37 WARN org.apache.spark.scheduler.TaskSetManager: Lost task 5.0 in stage 1.0 (TID 23, cluster-1dec-w-6.us-central1-b.c.lustrous-drake-255300.internal, executor 3): org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopWriter$.org$apache$spark$internal$io$SparkHadoopWriter$$executeTask(SparkHadoopWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopWriter$$anonfun$3.apply(SparkHadoopWriter.scala:83)
+	at org.apache.spark.internal.io.SparkHadoopWriter$$anonfun$3.apply(SparkHadoopWriter.scala:78)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:109)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/worker.py", line 253, in main
+    process()
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/worker.py", line 248, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/serializers.py", line 140, in dump_stream
+    for obj in iterator:
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/rdd.py", line 1556, in func
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/util.py", line 55, in wrapper
+    return f(*args, **kwargs)
+  File "/tmp/8daf5743e1724d5cbb95f3efc051acf6/dijkstra.py", line 40, in buildCpd
+  File "./cpd.zip/grid.py", line 114, in dijkstra
+    heapq.heappush(heap,(newd,n[i]))
+MemoryError
+
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:332)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:471)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:454)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:286)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.internal.io.SparkHadoopWriter$$anonfun$4.apply(SparkHadoopWriter.scala:128)
+	at org.apache.spark.internal.io.SparkHadoopWriter$$anonfun$4.apply(SparkHadoopWriter.scala:127)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1415)
+	at org.apache.spark.internal.io.SparkHadoopWriter$.org$apache$spark$internal$io$SparkHadoopWriter$$executeTask(SparkHadoopWriter.scala:139)
+	... 8 more
+
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:06 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:10 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:17 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:18 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:18 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:18 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:18 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:18 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:18 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:18 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:18 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:20 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:30 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:40 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:47:50 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:48:00 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:48:08 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:48:08 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:48:08 ERROR org.apache.spark.scheduler.cluster.YarnScheduler: Lost executor 5 on cluster-1dec-w-4.us-central1-b.c.lustrous-drake-255300.internal: Container container_1572195603603_0016_01_000007 exited from explicit termination request.
+19/10/28 01:48:08 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:48:20 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:48:20 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:14 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:20 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStreamer.java:1472)
+	at org.apache.hadoop.hdfs.DataStreamer.processDatanodeError(DataStreamer.java:1244)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:663)
+19/10/28 01:49:32 ERROR org.apache.spark.scheduler.AsyncEventQueue: Listener EventLoggingListener threw an exception
+java.io.IOException: All datanodes [DatanodeInfoWithStorage[10.128.0.28:9866,DS-5f502b4f-560e-445a-ad1d-c99f9acfb6f8,DISK]] are bad. Aborting...
+	at org.apache.hadoop.hdfs.DataStreamer.handleBadDatanode(DataStreamer.java:1538)
+	at org.apache.hadoop.hdfs.DataStreamer.setupPipelineForAppendOrRecovery(DataStre

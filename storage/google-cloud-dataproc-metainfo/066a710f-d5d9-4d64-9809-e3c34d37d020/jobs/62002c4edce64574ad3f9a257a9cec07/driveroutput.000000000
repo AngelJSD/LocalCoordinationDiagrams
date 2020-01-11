@@ -1,0 +1,26 @@
+19/10/28 05:49:50 INFO org.spark_project.jetty.util.log: Logging initialized @5779ms
+19/10/28 05:49:50 INFO org.spark_project.jetty.server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+19/10/28 05:49:50 INFO org.spark_project.jetty.server.Server: Started @6016ms
+19/10/28 05:49:50 INFO org.spark_project.jetty.server.AbstractConnector: Started ServerConnector@514dcce6{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+19/10/28 05:49:51 WARN org.apache.spark.scheduler.FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
+19/10/28 05:49:52 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at cluster-4def-m/10.128.0.34:8032
+19/10/28 05:49:53 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at cluster-4def-m/10.128.0.34:10200
+19/10/28 05:49:55 WARN org.apache.hadoop.hdfs.DataStreamer: Caught exception
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1252)
+	at java.lang.Thread.join(Thread.java:1326)
+	at org.apache.hadoop.hdfs.DataStreamer.closeResponder(DataStreamer.java:980)
+	at org.apache.hadoop.hdfs.DataStreamer.endBlock(DataStreamer.java:630)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:807)
+19/10/28 05:49:55 WARN org.apache.hadoop.hdfs.DataStreamer: Caught exception
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1252)
+	at java.lang.Thread.join(Thread.java:1326)
+	at org.apache.hadoop.hdfs.DataStreamer.closeResponder(DataStreamer.java:980)
+	at org.apache.hadoop.hdfs.DataStreamer.endBlock(DataStreamer.java:630)
+	at org.apache.hadoop.hdfs.DataStreamer.run(DataStreamer.java:807)
+19/10/28 05:49:56 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1572240828625_0002
+19/10/28 05:50:07 INFO org.apache.hadoop.mapred.FileInputFormat: Total input files to process : 1
+19/10/28 05:57:54 INFO org.spark_project.jetty.server.AbstractConnector: Stopped Spark@514dcce6{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
