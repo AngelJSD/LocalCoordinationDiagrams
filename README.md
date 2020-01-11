@@ -1,5 +1,10 @@
-# CloudPathPlanning
-Here is the first attempt of a CloudPathPlanning method
+# Local  Coordination  Diagrams  for  Collision  Avoidance  in  Multi-Robot Path  Planning
+Abstract: Autonomous robots are intended to help humans performing a lot of different tasks in a more safer and efficient way. Some of those tasks must be solved by a group of autonomous robots. Solutions including multiple robots have to solve group problems like communication and coordination; also, common problems of autonomous robots like the widely studied problem of Path Planning must be rethought. In this case, finding a collision-free path is not enough because each robot also has to avoid collisions with other robots (by coordinating their movements). In this scenario, the path planning problem turns into the multi-robot motion planning (MRMP) problem. There are two approaches for solving the MRMP problem: coupled and decoupled. This work is focused on the decoupled approach because it has the potential to solve MRMP not only in a centralized way but, also in a concurrent or distributed way. In this sense, a new parallelizable algorithm, called Local Coordination Diagrams - LCD, is presented in this paper. Experimental results show that our approach can be applied efficiently to a large number of robots.
+
+## Experiments on real maps
+
+Berlin Scenario with 100 paths to be coordinated. Black cells represent obstacles. Paths to be coordinated are represented in gray cells. Additionally, the start cell is marked with a random coloured square and the last cell is marked with a triangle colored with the same color of the path where it belongs.
+
 
 ## To Compile
 Please always generate the executables following the examples *myprog.out, myprog.exe*.
